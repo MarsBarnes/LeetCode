@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "compile": "tsc",
+        "start": "node LC2434.js"
+    }
+}
