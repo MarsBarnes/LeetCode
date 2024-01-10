@@ -88,5 +88,4 @@ function amountOfTime(root: TreeNode | null, start: number): number {
     return counter;
 };
 
-//run function with input
 amountOfTime(root, 3);
