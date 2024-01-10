@@ -1,29 +1,31 @@
 function isPathCrossing(path: string): boolean {
-  let currentLocation = [0, 0];
+  let x = 0;
+  let y = 0;
+  let location = x.toString().concat(",", y.toString());
   let visited = new Set();
+  visited.add(location);
   for (let letter of path) {
     switch (letter) {
       case "N":
-        currentLocation[1] = currentLocation[1] + 1;
+        y++;
         break;
       case "S":
-        currentLocation[1] = currentLocation[1] - 1;
+        y--;
         break;
       case "E":
-        currentLocation[0] = currentLocation[0] + 1;
+        x++;
         break;
       case "W":
-        currentLocation[0] = currentLocation[0] - 1;
+        x--;
         break;
     }
-    if (visited.has(currentLocation)) {
+    if (visited.has(x.toString().concat(',', y.toString()))) {
       return true;
     } else {
-      visited.add(currentLocation);
+      visited.add(x.toString().concat(',', y.toString()));
     }
   }
 
   return false;
 }
-
-console.log(isPathCrossing("NES"));
+console.log(isPathCrossing("ENNNNNNNNNNNEEEEEEEEEESSSSSSSSSS"));
