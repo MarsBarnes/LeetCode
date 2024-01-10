@@ -63,7 +63,7 @@ function amountOfTime(root: TreeNode | null, start: number): number {
 
     for (let i = 0; i < currentLength; i++) {
       let node = queue[i];
-      for (const [node] of graph) {
+      for (const [key, node] of graph) {
         if (!seen.has(node)) {
           seen.add(node);
           nextQueue.push(node);
@@ -78,3 +78,6 @@ function amountOfTime(root: TreeNode | null, start: number): number {
   //return counter
   return counter;
 }
+
+
+amountOfTime(root, 3);
