@@ -51,7 +51,7 @@ function minFallingPathSum(matrix: number[][]): number {
         sum = Math.min(sum, currentSum)
     }
 
-    return sums 
+    return sum
 };
 
 console.log(
